@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Schedule</title>
+<!-- Bulma-- First time to use it -->    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+<!-- Font Awesome-- for use of icons within Bulma -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<!-- css -->
+<link rel="stylesheet" type="text/css"href="./train.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="notification">
+                <section class="hero is-warning">
+                        <div class="hero-body">
+                          <div class="container">
+                            <h1 class="title">
+                              Whistlestop
+                            </h1>
+                            <h2 class="subtitle">
+                              Always on time!
+                            </h2>
+                          </div>
+                        </div>
+                </section>
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th><abbr title="trainName">Train Name</abbr></th>
+                        <th><abbr title="destination">Destination</abbr></th>
+                        <th><abbr title="frequency">Frequency (min)</abbr></th>
+                        <th><abbr title="nextArrival">Next Arrival</abbr></th>
+                        <th><abbr title="minutesAway">Minutes Away</abbr></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="name">test</td>
+                            <td id="dest">test1</td>
+                            <td id="freq">test2</td>
+                            <td id="nA">test3</td>
+                            <td id="mA">test4</td>
+                        </tr>
+                    </tbody>
+                </table>  
+                <div class="control">
+                        <input class="input" type="text" placeholder="Train Name">
+                        <input class="input" type="text" placeholder="Destination">
+                        <input class="input" type="text" placeholder="First Train Time">
+                        <input class="input" type="text" placeholder="Frequency (min)">
+                        <div class="control">
+                            <button class="button is-warning">Search A Train</button>
+                        </div>
+                </div>  
+        </div>
+    </div>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+<!-- JavaScript -->
+<script type="text/javascript" src=".\trivia.js"></script>
+</body>
+
+
+
+</html>
