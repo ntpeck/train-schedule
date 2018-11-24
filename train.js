@@ -4,10 +4,10 @@
     authDomain: "train-shedule-53468.firebaseapp.com",
     databaseURL: "https://train-shedule-53468.firebaseio.com",
     projectId: "train-shedule-53468",
-    storageBucket: "train-shedule-53468.appspot.com",
+    storageBucket: "https://train-shedule-53468.appspot.com",
     messagingSenderId: "388400015836"
   };
-  
+
   firebase.initializeApp(config);
 
 // variable to store firebase data
@@ -22,8 +22,8 @@ $("#userInput").on("click", function (event) {
     // variables to store user inputs
     var trainName = $("#trainName").val().trim();
     var destination = $("#destination").val().trim();
-    var firstTrain = moment($("#start-input").val().trim(), "HH:mm").format("hh:mm");
-    var frequency = $("frequency").val().trim();
+    var firstTrain = moment($("#firstTrain").val().trim(), "HH:mm").format("hh:mm");
+    var frequency = $("#frequency").val().trim();
 
     // checks variables for proper functionality
     console.log(trainName);
@@ -40,10 +40,10 @@ $("#userInput").on("click", function (event) {
     };
     
     // check for functional object
-    console.log(newTrain.name);
-    console.log(newTrain.dest);
-    console.log(newTrain.first);
-    console.log(newTrain.freq);
+    console.log(nextTrain.name);
+    console.log(nextTrain.dest);
+    console.log(nextTrain.first);
+    console.log(nextTrain.freq);
 
     // push to firebase
     database.ref().push(nextTrain);
