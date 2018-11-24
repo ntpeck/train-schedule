@@ -9,8 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
 <!-- Font Awesome-- for use of icons within Bulma -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 <!-- css -->
-<link rel="stylesheet" type="text/css"href="./train.css">
+    <link rel="stylesheet" type="text/css"href="./train.css">
+<!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"   
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+<!-- firebase - I've seen this at the bottom of the html, before other <script> tags and I've seen this at the top of the js file. Not sure which is better? -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
 
 </head>
 <body>
@@ -39,7 +47,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr id="tr1">
                             <td id="name"></td>
                             <td id="dest"></td>
                             <td id="freq"></td>
@@ -54,30 +62,13 @@
                         <input id="firstTrain" class="input" type="text" placeholder="First Train Time">
                         <input id="frequency" class="input" type="text" placeholder="Frequency (min)">
                         <div class="control">
-                            <button id=userInput class="button is-warning">Search A Train</button>
+                            <button id=userInput class="button is-warning">Search Trains</button>
                         </div>
                 </div>  
         </div>
     </div>
 
-<!-- firebase - I've seen this at the bottom of the html, before other <script> tags and I've seen this at the top of the js file. Not sure which is better? -->
-<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA0sGsAQVKcUZ25thqtih7GdrXrx23hpQI",
-    authDomain: "train-shedule-53468.firebaseapp.com",
-    databaseURL: "https://train-shedule-53468.firebaseio.com",
-    projectId: "train-shedule-53468",
-    storageBucket: "",
-    messagingSenderId: "388400015836"
-  };
-  firebase.initializeApp(config);
-</script>
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
+
 <!-- JavaScript -->
 <script type="text/javascript" src=".\train.js"></script>
 </body>
